@@ -84,6 +84,10 @@ Toàn bộ tri thức và quy chuẩn dự án được đóng gói thành các 
   2. *Đã có hàm tiện ích tương tự trong codebase chưa?*
   3. *Có thể giải quyết bằng 1 dòng mã hoặc cấu hình không?*
   4. *Chỉ khi không còn lựa chọn nào khác mới viết mã tối thiểu.*
+* **`superpowers` (Phương pháp luận kỹ thuật phần mềm chuẩn mực)**: Tuyển tập các kỹ năng kỷ luật cao từ **Jesse Vincent (`obra/superpowers`)**:
+  - `systematic-debugging`: Tuyệt đối không sửa mã khi chưa điều tra nguyên nhân gốc rễ (Root Cause Investigation).
+  - `subagent-driven-development`: Điều phối tác tử con độc lập cho từng nhiệm vụ nhỏ kèm khâu rà soát chéo.
+  - `writing-plans` & `verification-before-completion`: Bắt buộc lập kế hoạch rõ ràng và chỉ xác nhận hoàn thành khi có bằng chứng kiểm thử thực tế.
 
 ---
 
@@ -179,5 +183,6 @@ Dự án này kế thừa và tích hợp các nghiên cứu cũng như công c�
 - Phương pháp luận **Harness Engineering** dựa trên các nghiên cứu kỹ thuật của **Martin Fowler** (Thoughtworks).
 - Bộ kỹ năng Odoo và công cụ kiểm thử `odoo-workflow` từ tác giả **[unclecatvn/agent-skills](https://github.com/unclecatvn/agent-skills)** (MIT License).
 - Triết lý tối giản hóa mã nguồn (*Ladder of Laziness*) và bộ kỹ năng `ponytail` từ tác giả **[DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)** (MIT License).
+- Khung kỹ năng kỷ luật công nghệ phần mềm từ tác giả **[obra/superpowers](https://github.com/obra/superpowers)** (Jesse Vincent, MIT License).
 - Chuẩn giao thức **Model Context Protocol (MCP)** do **Anthropic** khởi xướng.
 - Tinh thần kiến tạo giải pháp bền vững (*Solution First*) của tập thể kỹ sư tại **TGL Solutions**.

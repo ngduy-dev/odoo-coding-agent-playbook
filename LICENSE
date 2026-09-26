@@ -26,4 +26,5 @@ SOFTWARE.
 This repository incorporates and builds upon open-source materials from:
 - **unclecatvn/agent-skills** (MIT License) - Copyright (c) 2026 UncleCat (Odoo version reference packs and odoo-workflow).
 - **DietrichGebert/ponytail** (MIT License) - Copyright (c) 2026 Dietrich Gebert (Ponytail skill collection).
+- **obra/superpowers** (MIT License) - Copyright (c) 2025 Jesse Vincent (Superpowers skills framework).
 - **Model Context Protocol (MCP)** specifications by Anthropic.
