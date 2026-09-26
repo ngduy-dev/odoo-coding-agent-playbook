@@ -1,12 +1,14 @@
-# Bộ Công Cụ MCP Tham Khảo Cho Odoo Developer
+# Hướng Dẫn Tích Hợp Các MCP Server Tham Khảo Cho Odoo
 
-Tài liệu này tổng hợp **4 MCP Server được tác giả đúc kết và thường xuyên sử dụng trong thực tế** khi phát triển các dự án Odoo. Đây là tài liệu mang tính chất chia sẻ kinh nghiệm tham khảo, anh em có thể tùy biến hoặc bổ sung thêm các công cụ phù hợp với quy trình làm việc của riêng mình (áp dụng tốt trên **Google Antigravity**, **Claude Code**, **Cursor**, hoặc **Windsurf**).
+Tài liệu này tổng hợp thông tin, đường dẫn repository chính thức và file cấu hình mẫu cho **4 MCP Server được tác giả đúc kết và thường xuyên sử dụng trong thực tế** khi phát triển Odoo. 
 
 ---
 
 ## 1. Sequential Thinking MCP
-- **Mục đích**: Kích hoạt khả năng phân tích logic từng bước (chain-of-thought) và đánh giá đánh đổi (trade-offs) trước khi sinh mã.
-- **Cấu hình (Node / npx)**:
+* **Repository GitHub**: [`modelcontextprotocol/servers/tree/main/src/sequentialthinking`](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking)
+* **Gói NPM**: `@modelcontextprotocol/server-sequential-thinking`
+* **Mục đích**: Hỗ trợ Agent tư duy từng bước, đánh giá rủi ro và so sánh phương án trước khi code.
+* **Cấu hình JSON**:
 ```json
 {
   "mcpServers": {
@@ -20,9 +22,11 @@ Tài liệu này tổng hợp **4 MCP Server được tác giả đúc kết và
 
 ---
 
-## 2. PostgreSQL / Database MCP
-- **Mục đích**: Kết nối trực tiếp vào CSDL PostgreSQL cục bộ/dev để soi cấu trúc bảng, trường dữ liệu, quan hệ Many2one/One2many và index thực tế.
-- **Cấu hình (Docker hoặc Python / Node)**:
+## 2. PostgreSQL Database MCP
+* **Repository GitHub**: [`modelcontextprotocol/servers/tree/main/src/postgres`](https://github.com/modelcontextprotocol/servers/tree/main/src/postgres)
+* **Gói NPM**: `@modelcontextprotocol/server-postgres`
+* **Mục đích**: Cho phép Agent truy vấn trực tiếp vào CSDL PostgreSQL cục bộ/dev để soi cấu trúc bảng, các trường quan hệ Many2one/One2many và index của Odoo.
+* **Cấu hình JSON**:
 ```json
 {
   "mcpServers": {
@@ -42,8 +46,10 @@ Tài liệu này tổng hợp **4 MCP Server được tác giả đúc kết và
 ---
 
 ## 3. Chrome DevTools MCP
-- **Mục đích**: Tự động hóa trình duyệt Chrome, thực hiện kiểm thử giao diện Odoo OWL, bắt lỗi JavaScript Console và kiểm tra luồng Network.
-- **Cấu hình**:
+* **Repository GitHub**: [`ChromeDevTools/chrome-devtools-mcp`](https://github.com/ChromeDevTools/chrome-devtools-mcp)
+* **Gói NPM**: `chrome-devtools-mcp`
+* **Mục đích**: Tự động hóa trình duyệt Chrome, thực hiện kiểm thử giao diện Odoo OWL, bắt lỗi JavaScript Console và kiểm tra luồng Network.
+* **Cấu hình JSON**:
 ```json
 {
   "mcpServers": {
@@ -57,9 +63,11 @@ Tài liệu này tổng hợp **4 MCP Server được tác giả đúc kết và
 
 ---
 
-## 4. Web Fetch & Search MCP (Tra cứu OCA / Docs)
-- **Mục đích**: Cho phép Agent tra cứu các module mã nguồn mở OCA trên GitHub và tài liệu chính thức của Odoo.
-- **Cấu hình (Ví dụ với Fetch MCP)**:
+## 4. Web Fetch MCP (Tra cứu OCA / Docs)
+* **Repository GitHub**: [`modelcontextprotocol/servers/tree/main/src/fetch`](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch)
+* **Gói Python / UV**: `mcp-server-fetch`
+* **Mục đích**: Tra cứu tài liệu kỹ thuật Odoo và các giải pháp module mã nguồn mở OCA trên GitHub.
+* **Cấu hình JSON**:
 ```json
 {
   "mcpServers": {
@@ -70,4 +78,4 @@ Tài liệu này tổng hợp **4 MCP Server được tác giả đúc kết và
   }
 }
 ```
-*(Hoặc sử dụng Parallel Search MCP tích hợp sẵn nếu chạy trong Antigravity)*.
+*(Lưu ý: Nếu sử dụng Google Antigravity, bạn có thể sử dụng trực tiếp công cụ `parallel-search` tích hợp sẵn mà không cần cấu hình thêm)*.

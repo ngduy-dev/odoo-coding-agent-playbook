@@ -167,13 +167,15 @@ odoo-coding-agent-playbook/
 
 ---
 
-## 🙏 Lời Cảm Ơn & Bản Quyền Mã Nguồn Mở (Credits & License)
+## 📄 License & Third-Party Notices
 
-Dự án này được phát hành dưới giấy phép mã nguồn mở **[MIT License](LICENSE)**.
+### License
+Dự án được phát hành theo giấy phép mã nguồn mở **[MIT License](LICENSE)**.
 
-### Ghi nhận đóng góp (Acknowledgments):
+### Acknowledgments
+Dự án này kế thừa và tích hợp các nghiên cứu cũng như công cụ mã nguồn mở từ cộng đồng:
 - Phương pháp luận **Harness Engineering** dựa trên các nghiên cứu kỹ thuật của **Martin Fowler** (Thoughtworks).
-- Bộ kỹ năng Odoo và công cụ kiểm thử `odoo-workflow` xuất sắc từ tác giả **[unclecatvn/agent-skills](https://github.com/unclecatvn/agent-skills)**.
-- Triết lý tối giản hóa mã nguồn và bộ kỹ năng `ponytail` từ tác giả **[DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)**.
+- Bộ kỹ năng Odoo và công cụ kiểm thử `odoo-workflow` từ tác giả **[unclecatvn/agent-skills](https://github.com/unclecatvn/agent-skills)** (MIT License).
+- Triết lý tối giản hóa mã nguồn (*Ladder of Laziness*) và bộ kỹ năng `ponytail` từ tác giả **[DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)** (MIT License).
 - Chuẩn giao thức **Model Context Protocol (MCP)** do **Anthropic** khởi xướng.
 - Tinh thần kiến tạo giải pháp bền vững (*Solution First*) của tập thể kỹ sư tại **TGL Solutions**.
