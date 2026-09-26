@@ -63,19 +63,18 @@ Tài liệu này tổng hợp thông tin, đường dẫn repository chính th�
 
 ---
 
-## 4. Web Fetch MCP (Tra cứu OCA / Docs)
-* **Repository GitHub**: [`modelcontextprotocol/servers/tree/main/src/fetch`](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch)
-* **Gói Python / UV**: `mcp-server-fetch`
-* **Mục đích**: Tra cứu tài liệu kỹ thuật Odoo và các giải pháp module mã nguồn mở OCA trên GitHub.
+## 4. Parallel Search MCP (Tra cứu OCA / Odoo Docs trực tiếp)
+* **Tài liệu & Nhà phát triển**: [Parallel AI Search MCP](https://docs.parallel.ai/search/search-mcp)
+* **Mục đích**: Cho phép Agent tìm kiếm thông tin thời gian thực trên web, tra cứu tài liệu kỹ thuật Odoo mới nhất và quét kho module mã nguồn mở OCA trên GitHub mà không cần API key phức tạp.
 * **Cấu hình JSON**:
 ```json
 {
   "mcpServers": {
-    "fetch": {
-      "command": "uvx",
-      "args": ["mcp-server-fetch"]
+    "parallel-search": {
+      "command": "npx",
+      "args": ["-y", "@parallel-ai/search-mcp"]
     }
   }
 }
 ```
-*(Lưu ý: Nếu sử dụng Google Antigravity, bạn có thể sử dụng trực tiếp công cụ `parallel-search` tích hợp sẵn mà không cần cấu hình thêm)*.
+*(Lưu ý: Nếu sử dụng trong Google Antigravity, `parallel-search` đã được tích hợp sẵn làm công cụ mặc định, anh em có thể dùng ngay mà không cần cấu hình)*.

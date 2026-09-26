@@ -34,4 +34,5 @@ This repository incorporates and builds upon open-source materials from:
   - Sequential Thinking Server: https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking
   - PostgreSQL Database Server: https://github.com/modelcontextprotocol/servers/tree/main/src/postgres
   - Web Fetch Server: https://github.com/modelcontextprotocol/servers/tree/main/src/fetch
+- **Parallel AI Search MCP**: https://docs.parallel.ai/search/search-mcp
 - **Chrome DevTools MCP** (Apache 2.0 License) - Copyright (c) 2025 Google LLC: https://github.com/ChromeDevTools/chrome-devtools-mcp
