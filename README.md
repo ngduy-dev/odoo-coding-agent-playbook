@@ -39,7 +39,7 @@ $$
    │                                                                        │
    │   [GUIDES - Ràng buộc & Chỉ dẫn]                                       │
    │   • Skills (.agents/skills)     ──► Ràng buộc ORM, hạn chế SQL thô     │
-   │   • Reverse Interview Gate      ──► Phân tích đặc tả chuẩn Nhật        │
+   │   • Reverse Interview Gate      ──► Phân tích đặc tả kỹ thuật chi tiết │
    │                                                                        │
    │   [ACTUATORS - Kết nối & Tương tác]┌────────────────────────────────┐   │
    │   • PostgreSQL MCP                 │          THE BRAIN             │   │
@@ -67,7 +67,7 @@ Kỹ sư phần mềm định vị vai trò là **Kỹ sư giải pháp (Solutio
 Khi các công cụ Coding Agent được cấp quyền can thiệp trực tiếp vào mã nguồn và môi trường dòng lệnh (Terminal), việc thiếu vắng một quy trình Harness có kiểm soát sẽ dẫn đến các rủi ro hệ thống:
 
 - **Tái phát minh các thành phần sẵn có**: Tự phát triển các giải pháp tùy biến phức tạp trong khi framework Odoo đã hỗ trợ tính năng tiêu chuẩn (ví dụ: tự lập trình cơ chế định giá thay vì kế thừa cấu hình `product.pricelist`).
-- **Phá vỡ tính toàn vẹn của kiến trúc**: Sử dụng các truy vấn SQL trực tiếp (`cr.execute()`), lạm dụng quyền quản trị tối cao (`sudo()`) dẫn đến vi phạm bảo mật dữ liệu đa công ty (Multi-company Isolation), hoặc bỏ sót các hàm bản địa hóa `_()` phục vụ thị trường Nhật Bản (`ja_JP`).
+- **Phá vỡ tính toàn vẹn của kiến trúc**: Sử dụng các truy vấn SQL trực tiếp (`cr.execute()`), lạm dụng quyền quản trị tối cao (`sudo()`) dẫn đến vi phạm bảo mật dữ liệu đa công ty (Multi-company Isolation), hoặc bỏ sót các hàm bản địa hóa `_()` phục vụ môi trường đa ngôn ngữ (i18n).
 
 ---
 
