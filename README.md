@@ -41,25 +41,27 @@ Repo này tích hợp sẵn bộ sưu tập `.agent/skills/` chuẩn hóa theo t
 
 ---
 
-## 🔌 Khía Cạnh 2: Tích Hợp Hệ Thống Thực Tế (Bộ Tứ MCP)
+## 🔌 Khía Cạnh 2: Tích Hợp Hệ Thống Thực Tế — Góc Nhìn Về MCP (Model Context Protocol)
 
-Thay vì để tác tử đoán mò trong "phòng kín", repo cung cấp hướng dẫn tích hợp **Bộ tứ MCP cốt lõi**:
+Mỗi dự án và mỗi kỹ sư sẽ có một nhu cầu công cụ khác nhau. MCP không phải là một tiêu chuẩn bắt buộc phải cài đặt toàn bộ, mà là một **giao thức mở linh hoạt** giúp tác tử kết nối với các nguồn dữ liệu bên ngoài khi cần thiết.
+
+Dưới đây là **4 MCP thực tế mà tác giả thường xuyên sử dụng và thấy mang lại hiệu quả cao nhất** trong quy trình phát triển Odoo hàng ngày để anh em tham khảo và tùy biến theo nhu cầu riêng:
 
 ```
-   ┌──────────────────────────────────────────────────────────────────┐
-   │            BỘ TỨ MCP CỐT LÕI TRONG CHU TRÌNH PHÁT TRIỂN          │
-   │                                                                  │
-   │  [Sequential Thinking] ──► Phân tích logic đa bước & rủi ro      │
-   │           │                                                      │
-   │  [Parallel Search]     ──► Tra cứu tài liệu kỹ thuật Odoo & OCA  │
-   │           │                                                      │
-   │  [Toolbox Databases]   ──► Kiểm tra lược đồ CSDL PostgreSQL      │
-   │           │                                                      │
-   │  [Chrome DevTools]     ──► Tự động hóa kiểm thử giao diện OWL    │
-   └──────────────────────────────────────────────────────────────────┘
+   ┌────────────────────────────────────────────────────────────────────────┐
+   │            4 MCP THAM KHẢO HỮU ÍCH TRONG CÔNG VIỆC THỰC TẾ             │
+   │                                                                        │
+   │  [Sequential Thinking] ──► Hỗ trợ phân tích logic đa bước & rủi ro     │
+   │           │                                                            │
+   │  [Parallel Search]     ──► Tra cứu tài liệu kỹ thuật Odoo & OCA nhanh  │
+   │           │                                                            │
+   │  [Toolbox Databases]   ──► Đối soát lược đồ CSDL PostgreSQL cục bộ     │
+   │           │                                                            │
+   │  [Chrome DevTools]     ──► Hỗ trợ kiểm thử và bắt lỗi giao diện OWL    │
+   └────────────────────────────────────────────────────────────────────────┘
 ```
 
-👉 Xem chi tiết cấu hình JSON tại thư mục: [`mcp-configs/README.md`](mcp-configs/README.md).
+👉 Xem hướng dẫn tham khảo và cấu hình mẫu tại: [`mcp-configs/README.md`](mcp-configs/README.md).
 
 ---
 

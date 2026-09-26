@@ -1,6 +1,6 @@
-# Bộ Tứ MCP Cốt Lõi Cho Odoo Developer (The Core Four MCPs)
+# Bộ Công Cụ MCP Tham Khảo Cho Odoo Developer
 
-Tài liệu này hướng dẫn cách cấu hình 4 MCP Server thiết yếu cho môi trường phát triển Odoo (áp dụng cho **Google Antigravity**, **Claude Code**, **Cursor**, hoặc **Windsurf**).
+Tài liệu này tổng hợp **4 MCP Server được tác giả đúc kết và thường xuyên sử dụng trong thực tế** khi phát triển các dự án Odoo. Đây là tài liệu mang tính chất chia sẻ kinh nghiệm tham khảo, anh em có thể tùy biến hoặc bổ sung thêm các công cụ phù hợp với quy trình làm việc của riêng mình (áp dụng tốt trên **Google Antigravity**, **Claude Code**, **Cursor**, hoặc **Windsurf**).
 
 ---
 
