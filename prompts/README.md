@@ -1,6 +1,6 @@
-# System Prompts Mẫu Dành Cho Odoo Subagents
+# Gợi Ý Mẫu Prompts Tham Khảo Cho Odoo Subagents
 
-Thư mục này gợi ý một số mẫu Prompt tham khảo để điều phối Subagents trong quy trình phát triển Odoo, giúp lập trình viên dễ dàng tùy biến theo nhu cầu thực tế của từng dự án.
+Thư mục này tổng hợp một số mẫu Prompt tham khảo để điều phối Subagents trong quá trình phát triển Odoo. Bạn có thể tùy biến các câu hỏi hoặc checklist này tùy theo nhu cầu và quy mô thực tế của từng dự án.
 
 ---
 
