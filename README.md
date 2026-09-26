@@ -83,20 +83,22 @@ Trước khi tiến hành sửa đổi mã nguồn, engineer kích hoạt vai tr
 - Xác định ma trận phân quyền, dữ liệu biên và edge cases.
 - Hạn chế tối đa các sai lệch trong việc tiếp nhận yêu cầu.
 
-### 2. Tiêu chuẩn hóa quy tắc phát triển thông qua `SKILL.md` (Progressive Disclosure)
+### 2. Định hình tri thức tác tử qua các bộ kỹ năng tham khảo (`.agents/skills/`)
 
-Toàn bộ tri thức và chuẩn mực kỹ thuật được đóng gói theo định dạng chuẩn hóa trong thư mục `.agents/skills/`. Cơ chế **Progressive Disclosure** đảm bảo agent chỉ nạp các chỉ dẫn chi tiết khi ngữ cảnh công việc yêu cầu, tối ưu hóa context window và duy trì độ chính xác cao:
+Thay vì nhồi nhét toàn bộ tài liệu vào System Prompt gây lãng phí bộ nhớ (context bloat), kiến trúc tác tử hiện đại hỗ trợ cơ chế **nạp tri thức theo ngữ cảnh (On-Demand Context Loading)**. Tác tử chỉ đọc lướt mô tả ban đầu và sẽ tự động nạp hướng dẫn chi tiết khi gặp tác vụ tương ứng.
 
-* **`odoo-workflow` (Nguyên tắc: *Căn cứ thực tế trước khi sinh mã*)**: Mọi thao tác override method hoặc kế thừa view qua XPath bắt buộc phải trích dẫn chính xác file và vị trí dòng (`file:line`) từ base addons làm cơ sở.
-* **`odoo-16.0` đến `odoo-19.0` Reference Packs**: Cung cấp tài liệu tra cứu chuẩn xác về data model, ORM, kiến trúc View và thư viện OWL tương ứng với từng phiên bản.
-* **`ponytail` (Triết lý: *Ladder of Laziness — Tối giản hóa giải pháp*)**: Khung quy tắc kiểm soát độ phức tạp mã nguồn (anti-bloat) từ **DietrichGebert**, yêu cầu agent ưu tiên giải pháp có mức độ can thiệp thấp nhất:
-  1. *YAGNI (You Aren't Gonna Need It)*: Loại bỏ các tính năng mang tính suy đoán; tái sử dụng tối đa Odoo standard.
-  2. *Kế thừa nội tại*: Tái sử dụng các method và design pattern sẵn có trong codebase.
-  3. *Tối ưu can thiệp*: Ưu tiên các giải pháp cấu hình hoặc code ngắn gọn trước khi xây dựng module mới.
-* **`superpowers` (Quy chuẩn software engineering)**: Khung phương pháp luận kỹ thuật từ **Jesse Vincent (`obra/superpowers`)**:
-  - `systematic-debugging`: Yêu cầu điều tra và xác định root cause trước khi đề xuất bất kỳ phương án sửa lỗi nào.
-  - `subagent-driven-development`: Mô hình thực thi kế hoạch theo từng subagent độc lập kèm khâu kiểm định chéo.
-  - `verification-before-completion`: Nguyên tắc chỉ xác nhận hoàn tất nhiệm vụ khi có đầy đủ bằng chứng kiểm thử thực tế.
+Dưới đây là **các bộ kỹ năng tham khảo mẫu** được tổng hợp sẵn trong thư mục `.agents/skills/`, lập trình viên có thể tùy biến hoặc chọn lọc theo thực tế từng dự án:
+
+* **Bộ quy tắc thẩm định kiến trúc Odoo (Tham khảo `odoo-workflow`)**: Đề xuất nguyên tắc *căn cứ thực tế trước khi sinh mã* — khuyến khích tác tử trích dẫn file và vị trí dòng (`file:line`) từ base addons khi override method hoặc kế thừa view qua XPath.
+* **Bộ tra cứu nhanh phiên bản (Tham khảo `odoo-16.0` đến `odoo-19.0`)**: Cung cấp tài liệu tham chiếu về ORM, data model, XML view và cú pháp OWL cho từng phiên bản Odoo cụ thể.
+* **Bộ quy tắc tối giản hóa giải pháp (Tham khảo `ponytail` - DietrichGebert)**: Gợi ý tư duy *Ladder of Laziness* nhằm hạn chế việc tác tử tự viết code rườm rà:
+  1. *YAGNI*: Tận dụng tối đa cấu hình sẵn có của Odoo trước khi viết mã mới.
+  2. *Kế thừa*: Tái sử dụng method và hàm tiện ích nội tại trong codebase.
+  3. *Tối giản can thiệp*: Ưu tiên các giải pháp can thiệp gọn nhẹ nhất có thể.
+* **Bộ quy chuẩn kỹ nghệ phần mềm (Tham khảo `superpowers` - Jesse Vincent)**: Gợi ý các kỹ thuật phát triển kỷ luật:
+  - `systematic-debugging`: Tìm hiểu rõ root cause trước khi nhảy vào sửa mã nguồn.
+  - `subagent-driven-development`: Chia nhỏ kế hoạch và phân tách tác vụ cho các tác tử con.
+  - `verification-before-completion`: Yêu cầu kiểm tra kết quả thực tế trước khi kết luận hoàn tất.
 
 ---
 
@@ -177,11 +179,11 @@ odoo-coding-agent-playbook/
     └── README.md
 ```
 
-### Quy trình tích hợp vào dự án Odoo:
+### Gợi ý quy trình tích hợp vào dự án Odoo:
 
-1. Sao chép thư mục `.agents/skills/` vào thư mục gốc của repository dự án Odoo.
-2. Cấu hình các công cụ MCP tương thích với môi trường phát triển theo hướng dẫn tại `mcp-configs/README.md`.
-3. Áp dụng quy trình 3 giai đoạn khi tiếp nhận yêu cầu: **Làm rõ đặc tả (Clarify) ➔ Khảo sát kiến trúc (Trace) ➔ Triển khai có thẩm định (Dual Review)**.
+1. Lựa chọn và sao chép các kỹ năng cần thiết từ thư mục `.agents/skills/` vào thư mục gốc của repository dự án Odoo.
+2. Cấu hình các công cụ MCP phù hợp với môi trường phát triển hiện tại theo hướng dẫn tại `mcp-configs/README.md`.
+3. Tham khảo quy trình phát triển 3 giai đoạn: **Làm rõ đặc tả (Clarify) ➔ Khảo sát kiến trúc (Trace) ➔ Triển khai có thẩm định (Dual Review)**.
 
 ---
 
