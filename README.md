@@ -5,7 +5,7 @@
 [![Methodology](https://img.shields.io/badge/Methodology-Harness%20Engineering-darkgreen.svg)]()
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-success.svg)]()
 
-> **Handbook thực hành & Starter Kit dành cho Odoo Software Engineers**  
+> **Handbook thực hành & Starter Kit dành cho Odoo Software Engineers**
 > Định hình mô hình làm việc có cấu trúc: từ phát triển thủ công sang **thiết lập Harness Engineering**, hiện thực hóa nguyên lý **Solution First.**
 
 ---
@@ -14,11 +14,11 @@
 
 1. [Khung Lý Thuyết: Phương Pháp Luận Harness Engineering](#-khung-lý-thuyết-phương-pháp-luận-harness-engineering)
 2. [Nguyên Lý Nền Tảng: Solution First Và Kiểm Soát Technical Debt](#-nguyên-lý-nền-tảng-solution-first-và-kiểm-soát-technical-debt)
-3. [Thành Phần 1: Guides — Skills & Planning](#-thành-phần-1-guides--skills--planning)
+3. [Thành Phần 1: Guides — Skills &amp; Planning](#-thành-phần-1-guides--skills--planning)
 4. [Thành Phần 2: Actuators — Model Context Protocol (MCP)](#-thành-phần-2-actuators--model-context-protocol-mcp)
-5. [Thành Phần 3: Verifiers & Feedback — Subagents](#-thành-phần-3-verifiers--feedback--subagents)
-6. [Cấu Trúc Thư Mục & Hướng Dẫn Tích Hợp](#-cấu-trúc-thư-mục--hướng-dẫn-tích-hợp)
-7. [License & Third-Party Notices](#-license--third-party-notices)
+5. [Thành Phần 3: Verifiers &amp; Feedback — Subagents](#-thành-phần-3-verifiers--feedback--subagents)
+6. [Cấu Trúc Thư Mục &amp; Hướng Dẫn Tích Hợp](#-cấu-trúc-thư-mục--hướng-dẫn-tích-hợp)
+7. [License &amp; Third-Party Notices](#-license--third-party-notices)
 
 ---
 
@@ -41,11 +41,11 @@ $$
    │   • Skills (.agents/skills)     ──► Ràng buộc ORM, hạn chế SQL thô     │
    │   • Reverse Interview Gate      ──► Phân tích đặc tả kỹ thuật chi tiết │
    │                                                                        │
-   │   [ACTUATORS - Kết nối & Tương tác]┌────────────────────────────────┐   │
-   │   • PostgreSQL MCP                 │          THE BRAIN             │   │
-   │   • Chrome DevTools MCP            │            (LLM)               │   │
-   │   • Sequential Thinking            │      Năng lực suy luận thô     │   │
-   │                                    └────────────────────────────────┘   │
+   │   [ACTUATORS - Kết nối & Tương tác]┌────────────────────────────────┐  │
+   │   • PostgreSQL MCP                 │          THE BRAIN             │  │
+   │   • Chrome DevTools MCP            │            (LLM)               │  │
+   │   • Sequential Thinking            │      Năng lực suy luận thô     │  │
+   │                                    └────────────────────────────────┘  │
    │   [VERIFIERS - Kiểm tra & Đánh giá]                                    │
    │   • Role-play Debate            ──► Phản biện phương án kiến trúc      │
    │   • Independent Reviewer        ──► Kiểm soát ACL, N+1 query, i18n     │
@@ -62,7 +62,7 @@ $$
 
 Software Engineer định vị vai trò là **Solution Engineer** thay vì chỉ dừng lại ở **Feature Coder**. Mục tiêu cốt lõi không nằm ở số dòng code sinh ra, mà tập trung vào việc lựa chọn giải pháp kiến trúc tối ưu, giảm thiểu độ phức tạp và chi phí vận hành lâu dài của hệ thống ERP.
 
-### 2. Quản trị Nợ kỹ thuật (Technical Debt) khi tích hợp tác tử
+### 2. Quản trị Nợ kỹ thuật khi tích hợp tác tử
 
 Khi các công cụ Coding Agent được cấp quyền can thiệp trực tiếp vào mã nguồn và môi trường dòng lệnh (Terminal), việc thiếu vắng một quy trình Harness có kiểm soát sẽ dẫn đến các rủi ro hệ thống:
 
@@ -199,7 +199,7 @@ Dự án kế thừa và tích hợp các nghiên cứu cũng như công cụ m�
 - Bộ kỹ năng Odoo và công cụ kiểm thử `odoo-workflow` từ tác giả **[unclecatvn/agent-skills](https://github.com/unclecatvn/agent-skills)** (MIT License).
 - Triết lý tối giản hóa mã nguồn (*Ladder of Laziness*) và bộ kỹ năng `ponytail` từ tác giả **[DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)** (MIT License).
 - Khung kỹ năng kỷ luật công nghệ phần mềm từ tác giả **[obra/superpowers](https://github.com/obra/superpowers)** (Jesse Vincent, MIT License).
-- Chuẩn giao thức **[Model Context Protocol (MCP)](https://github.com/modelcontextprotocol)** và các máy chủ tham chiếu ([PostgreSQL](https://github.com/modelcontextprotocol/servers/tree/main/src/postgres), [Sequential Thinking](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking)) do **Anthropic** khởi xướng (MIT License).
+- Chuẩn giao thức **[Model Context Protocol (MCP)](https://github.com/modelcontextprotocol)** và các máy chủ tham chiếu ([Sequential Thinking](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking), [PostgreSQL Archived](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/postgres)) do **Anthropic** khởi xướng (MIT License), cùng công cụ kết nối cơ sở dữ liệu **[MCP Toolbox for Databases](https://github.com/googleapis/mcp-toolbox)** của **Google** (Apache 2.0 License).
 - Máy chủ tìm kiếm thời gian thực **[Parallel AI Search MCP](https://docs.parallel.ai/search/search-mcp)**.
 - Công cụ kiểm thử tự động trình duyệt **[Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp)** do **Google LLC** phát triển (Apache 2.0 License).
 - Tinh thần kiến tạo giải pháp bền vững (*Solution First*) của tập thể kỹ sư tại **TGL Solutions**.

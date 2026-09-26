@@ -22,11 +22,11 @@ Tài liệu này tổng hợp thông tin, đường dẫn repository chính th�
 
 ---
 
-## 2. PostgreSQL Database MCP
-* **Repository GitHub**: [`modelcontextprotocol/servers/tree/main/src/postgres`](https://github.com/modelcontextprotocol/servers/tree/main/src/postgres)
-* **Gói NPM**: `@modelcontextprotocol/server-postgres`
-* **Mục đích**: Cho phép Agent truy vấn trực tiếp vào CSDL PostgreSQL cục bộ/dev để soi cấu trúc bảng, các trường quan hệ Many2one/One2many và index của Odoo.
-* **Cấu hình JSON**:
+## 2. PostgreSQL Database MCP (MCP Toolbox for Databases)
+* **Repository GitHub**: [`googleapis/mcp-toolbox`](https://github.com/googleapis/mcp-toolbox) *(Hoặc tham khảo bản archived: [`modelcontextprotocol/servers-archived/tree/main/src/postgres`](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/postgres))*
+* **Gói NPM**: `@modelcontextprotocol/server-postgres` *(NPM registry)* hoặc công cụ enterprise [`mcp-toolbox`](https://github.com/googleapis/mcp-toolbox)
+* **Mục đích**: Cho phép Agent truy vấn trực tiếp vào CSDL PostgreSQL (môi trường dev cục bộ) để soi cấu trúc bảng, các trường quan hệ Many2one/One2many và index của Odoo.
+* **Cấu hình JSON mẫu (`@modelcontextprotocol/server-postgres`)**:
 ```json
 {
   "mcpServers": {
@@ -41,7 +41,7 @@ Tài liệu này tổng hợp thông tin, đường dẫn repository chính th�
   }
 }
 ```
-*(Thay thế user, password, port, và dbname tương ứng với cấu hình `odoo.conf` hoặc Docker của bạn)*.
+*(Thay thế user, password, port, và dbname tương ứng với cấu hình `odoo.conf` hoặc Docker của bạn. Khuyến nghị chỉ cấp quyền Read-Only cho tài khoản database dùng với MCP)*.
 
 ---
 
