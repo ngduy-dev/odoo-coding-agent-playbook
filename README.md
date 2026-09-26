@@ -35,7 +35,7 @@ $$\mathbf{Agent = Model + Harness}$$
    │                       THE AGENT HARNESS SYSTEM                         │
    │                                                                        │
    │   [GUIDES - Dẫn đường]                                                 │
-   │   • Skills (.agent/skills)      ──► Ép tuân thủ ORM, no raw SQL        │
+   │   • Skills (.agents/skills)     ──► Ép tuân thủ ORM, no raw SQL        │
    │   • Reverse Interview (/grill)  ──► Bóc tách nghiệp vụ chuẩn Nhật      │
    │                                                                        │
    │   [ACTUATORS - Tương tác]       ┌──────────────────────────────────┐   │
@@ -143,7 +143,7 @@ Thay vì nhồi nhét toàn bộ lịch sử trao đổi vào một cửa sổ n
 odoo-coding-agent-playbook/
 ├── README.md                  # Tài liệu phương pháp luận Harness Engineering
 ├── LICENSE                    # Giấy phép mã nguồn mở MIT
-├── .agent/
+├── .agents/
 │   └── skills/                # Gói tri thức Guides (Odoo 16-19, Workflow, Code-review)
 │       ├── odoo-workflow/
 │       ├── odoo-18.0/
@@ -156,7 +156,7 @@ odoo-coding-agent-playbook/
 ```
 
 ### Quy trình áp dụng vào dự án Odoo:
-1. Sao chép thư mục `.agent/skills/` vào thư mục gốc của repository dự án Odoo.
+1. Sao chép thư mục `.agents/skills/` (hoặc `.agent/skills/`) vào thư mục gốc của repository dự án Odoo.
 2. Cấu hình các công cụ MCP phù hợp với môi trường làm việc theo `mcp-configs/README.md`.
 3. Khi tiếp nhận yêu cầu, sử dụng các prompt tại `prompts/README.md` để khởi động chu trình: **Làm rõ (Clarify) ➔ Lập kiến trúc (Trace) ➔ Thực thi có kiểm định (Dual Review)**.
 
