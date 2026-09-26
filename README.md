@@ -182,5 +182,6 @@ Dự án kế thừa và tích hợp các nghiên cứu cũng như công cụ m�
 - Bộ kỹ năng Odoo và công cụ kiểm thử `odoo-workflow` từ tác giả **[unclecatvn/agent-skills](https://github.com/unclecatvn/agent-skills)** (MIT License).
 - Triết lý tối giản hóa mã nguồn (*Ladder of Laziness*) và bộ kỹ năng `ponytail` từ tác giả **[DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)** (MIT License).
 - Khung kỹ năng kỷ luật công nghệ phần mềm từ tác giả **[obra/superpowers](https://github.com/obra/superpowers)** (Jesse Vincent, MIT License).
-- Chuẩn giao thức **Model Context Protocol (MCP)** do **Anthropic** khởi xướng.
+- Chuẩn giao thức **[Model Context Protocol (MCP)](https://github.com/modelcontextprotocol)** và các máy chủ tham chiếu ([PostgreSQL](https://github.com/modelcontextprotocol/servers/tree/main/src/postgres), [Sequential Thinking](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking), [Fetch](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch)) do **Anthropic** khởi xướng (MIT License).
+- Công cụ kiểm thử tự động trình duyệt **[Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp)** do **Google LLC** phát triển (Apache 2.0 License).
 - Tinh thần kiến tạo giải pháp bền vững (*Solution First*) của tập thể kỹ sư tại **TGL Solutions**.

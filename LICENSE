@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 Duy & TGL Solutions contributors
+Copyright (c) 2026 Quoc Duy & TGL Solutions contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,8 +23,15 @@ SOFTWARE.
 ---
 
 ### Third-Party Licenses & Acknowledgments
+
 This repository incorporates and builds upon open-source materials from:
-- **unclecatvn/agent-skills** (MIT License) - Copyright (c) 2026 UncleCat (Odoo version reference packs and odoo-workflow).
-- **DietrichGebert/ponytail** (MIT License) - Copyright (c) 2026 Dietrich Gebert (Ponytail skill collection).
-- **obra/superpowers** (MIT License) - Copyright (c) 2025 Jesse Vincent (Superpowers skills framework).
-- **Model Context Protocol (MCP)** specifications by Anthropic.
+
+- **unclecatvn/agent-skills** (MIT License) - Copyright (c) 2026 UncleCat (Odoo version reference packs and odoo-workflow): https://github.com/unclecatvn/agent-skills
+- **DietrichGebert/ponytail** (MIT License) - Copyright (c) 2026 Dietrich Gebert (Ponytail skill collection): https://github.com/DietrichGebert/ponytail
+- **obra/superpowers** (MIT License) - Copyright (c) 2025 Jesse Vincent (Superpowers skills framework): https://github.com/obra/superpowers
+- **Model Context Protocol (MCP)** specifications & reference servers by Anthropic (MIT License):
+  - Specification & Core SDK: https://github.com/modelcontextprotocol
+  - Sequential Thinking Server: https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking
+  - PostgreSQL Database Server: https://github.com/modelcontextprotocol/servers/tree/main/src/postgres
+  - Web Fetch Server: https://github.com/modelcontextprotocol/servers/tree/main/src/fetch
+- **Chrome DevTools MCP** (Apache 2.0 License) - Copyright (c) 2025 Google LLC: https://github.com/ChromeDevTools/chrome-devtools-mcp
