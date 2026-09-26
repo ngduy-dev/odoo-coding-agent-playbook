@@ -78,3 +78,21 @@ Tài liệu này tổng hợp thông tin, đường dẫn repository chính th�
 }
 ```
 *(Lưu ý: Nếu sử dụng trong Google Antigravity, `parallel-search` đã được tích hợp sẵn làm công cụ mặc định, có thể kích hoạt trực tiếp mà không cần cấu hình)*.
+
+---
+
+## 5. NotebookLM MCP (Tra cứu tài liệu nghiệp vụ ERP quy mô lớn)
+* **Repository GitHub**: [`PleasePrompto/notebooklm-mcp`](https://github.com/PleasePrompto/notebooklm-mcp)
+* **Mục đích**: Cho phép Coding Agent tra cứu trực tiếp kho tài liệu đặc tả nghiệp vụ ERP, tài liệu BA hoặc guideline kỹ thuật nội bộ thông qua NotebookLM (Gemini) với câu trả lời bám sát nguồn trích dẫn (grounded citations), loại bỏ nguy cơ hallucination mà không gây tràn token (context bloat).
+* **Cấu hình JSON**:
+```json
+{
+  "mcpServers": {
+    "notebooklm": {
+      "command": "npx",
+      "args": ["-y", "notebooklm-mcp"]
+    }
+  }
+}
+```
+*(Xem hướng dẫn xác thực tài khoản Google và quản lý thư viện notebook tại kho lưu trữ của [PleasePrompto/notebooklm-mcp](https://github.com/PleasePrompto/notebooklm-mcp))*.

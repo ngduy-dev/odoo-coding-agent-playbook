@@ -106,15 +106,17 @@ Dưới đây là **các bộ kỹ năng tham khảo mẫu** được tổng h�
 
 Model không thể trực tiếp quan sát môi trường thực tế. Giao thức mở **Model Context Protocol (MCP)** cung cấp các kênh giao tiếp chuẩn hóa, cho phép agent truy cập an toàn vào cơ sở dữ liệu, tài liệu kỹ thuật và môi trường kiểm thử.
 
-Tùy thuộc vào hạ tầng của từng dự án, dưới đây là **4 MCP Server được tác giả đúc kết và thường xuyên sử dụng trong thực tế** khi phát triển Odoo:
+Tùy thuộc vào hạ tầng của từng dự án, dưới đây là **các MCP Server gợi ý tham khảo** hữu ích khi phát triển Odoo:
 
 ```
    ┌────────────────────────────────────────────────────────────────────────┐
-   │            4 MCP THAM KHẢO HỮU ÍCH TRONG CÔNG VIỆC THỰC TẾ             │
+   │            CÁC MCP GỢI Ý THAM KHẢO TRONG PHÁT TRIỂN ODOO               │
    │                                                                        │
    │  [Sequential Thinking] ──► Hỗ trợ phân tích logic đa bước & rủi ro     │
    │           │                                                            │
    │  [Parallel Search]     ──► Tra cứu tài liệu kỹ thuật Odoo & OCA nhanh  │
+   │           │                                                            │
+   │  [NotebookLM MCP]      ──► Tra cứu tài liệu nghiệp vụ ERP quy mô lớn   │
    │           │                                                            │
    │  [Toolbox Databases]   ──► Đối soát schema PostgreSQL cục bộ           │
    │           │                                                            │
@@ -124,8 +126,9 @@ Tùy thuộc vào hạ tầng của từng dự án, dưới đây là **4 MCP S
 
 1. **Sequential Thinking**: Hỗ trợ phân tích logic có cấu trúc, đánh giá rủi ro hệ thống và so sánh giải pháp trước khi triển khai.
 2. **Parallel Search**: Tra cứu nhanh tài liệu chính thức và các giải pháp đã được kiểm chứng từ kho mã nguồn mở OCA.
-3. **MCP Toolbox for Databases (PostgreSQL)**: Kết nối database môi trường development để đối soát cấu trúc bảng, quan hệ khóa ngoại và index.
-4. **Chrome DevTools MCP**: Tự động hóa kiểm thử giao diện và ghi nhận console log / lỗi JavaScript OWL tại trình duyệt.
+3. **NotebookLM MCP**: Kết nối với Google NotebookLM để tra cứu tài liệu đặc tả nghiệp vụ ERP (BA docs/sách hướng dẫn) có trích dẫn nguồn, tránh context bloat.
+4. **MCP Toolbox for Databases (PostgreSQL)**: Kết nối database môi trường development để đối soát cấu trúc bảng, quan hệ khóa ngoại và index.
+5. **Chrome DevTools MCP**: Tự động hóa kiểm thử giao diện và ghi nhận console log / lỗi JavaScript OWL tại trình duyệt.
 
 👉 Xem tài liệu hướng dẫn và liên kết kho mã nguồn tại: [`mcp-configs/README.md`](mcp-configs/README.md).
 

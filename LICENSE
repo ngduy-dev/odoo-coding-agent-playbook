@@ -36,4 +36,5 @@ This repository incorporates and builds upon open-source materials from:
   - PostgreSQL Database Server (Archived reference): https://github.com/modelcontextprotocol/servers-archived/tree/main/src/postgres
   - MCP Toolbox for Databases by Google (Apache 2.0 License): https://github.com/googleapis/mcp-toolbox
 - **Parallel AI Search MCP**: https://docs.parallel.ai/search/search-mcp
+- **NotebookLM MCP** by PleasePrompto: https://github.com/PleasePrompto/notebooklm-mcp
 - **Chrome DevTools MCP** (Apache 2.0 License) - Copyright (c) 2025 Google LLC: https://github.com/ChromeDevTools/chrome-devtools-mcp
