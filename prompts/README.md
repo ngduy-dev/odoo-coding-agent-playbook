@@ -1,6 +1,6 @@
 # System Prompts Mẫu Dành Cho Odoo Subagents
 
-Thư mục này chứa các mẫu Prompt chuẩn hóa để điều phối Subagents theo quy trình phát triển dự án Odoo quy chuẩn cho môi trường enterprise.
+Thư mục này gợi ý một số mẫu Prompt tham khảo để điều phối Subagents trong quy trình phát triển Odoo, giúp lập trình viên dễ dàng tùy biến theo nhu cầu thực tế của từng dự án.
 
 ---
 
