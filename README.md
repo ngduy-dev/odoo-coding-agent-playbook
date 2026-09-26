@@ -178,7 +178,7 @@ Dự án được phát hành theo giấy phép mã nguồn mở **[MIT License]
 
 ### Acknowledgments
 Dự án kế thừa và tích hợp các nghiên cứu cũng như công cụ mã nguồn mở từ cộng đồng:
-- Phương pháp luận **Harness Engineering** dựa trên các nghiên cứu kỹ thuật của **Martin Fowler** (Thoughtworks).
+- Phương pháp luận **[Harness Engineering](https://martinfowler.com/articles/exploring-gen-ai.html)** dựa trên các nghiên cứu kỹ thuật về tác tử tự hành của **Martin Fowler** (Thoughtworks).
 - Bộ kỹ năng Odoo và công cụ kiểm thử `odoo-workflow` từ tác giả **[unclecatvn/agent-skills](https://github.com/unclecatvn/agent-skills)** (MIT License).
 - Triết lý tối giản hóa mã nguồn (*Ladder of Laziness*) và bộ kỹ năng `ponytail` từ tác giả **[DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)** (MIT License).
 - Khung kỹ năng kỷ luật công nghệ phần mềm từ tác giả **[obra/superpowers](https://github.com/obra/superpowers)** (Jesse Vincent, MIT License).

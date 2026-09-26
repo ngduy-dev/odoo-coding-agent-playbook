@@ -26,6 +26,7 @@ SOFTWARE.
 
 This repository incorporates and builds upon open-source materials from:
 
+- **Harness Engineering methodology**: Research & publications by Martin Fowler (Thoughtworks): https://martinfowler.com/articles/exploring-gen-ai.html
 - **unclecatvn/agent-skills** (MIT License) - Copyright (c) 2026 UncleCat (Odoo version reference packs and odoo-workflow): https://github.com/unclecatvn/agent-skills
 - **DietrichGebert/ponytail** (MIT License) - Copyright (c) 2026 Dietrich Gebert (Ponytail skill collection): https://github.com/DietrichGebert/ponytail
 - **obra/superpowers** (MIT License) - Copyright (c) 2025 Jesse Vincent (Superpowers skills framework): https://github.com/obra/superpowers
