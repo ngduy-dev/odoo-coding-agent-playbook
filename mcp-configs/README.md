@@ -1,6 +1,6 @@
 # Hướng Dẫn Tích Hợp Các MCP Server Tham Khảo Cho Odoo
 
-Tài liệu này tổng hợp thông tin, đường dẫn repository chính thức và file cấu hình mẫu cho **4 MCP Server được tác giả đúc kết và thường xuyên sử dụng trong thực tế** khi phát triển Odoo. 
+Tài liệu này tổng hợp thông tin, đường dẫn repository chính thức và file cấu hình mẫu cho **4 MCP Server được tổng hợp và kiểm chứng qua thực tế** khi phát triển Odoo. 
 
 ---
 
@@ -25,7 +25,7 @@ Tài liệu này tổng hợp thông tin, đường dẫn repository chính th�
 ## 2. PostgreSQL Database MCP (MCP Toolbox for Databases)
 * **Repository GitHub**: [`googleapis/mcp-toolbox`](https://github.com/googleapis/mcp-toolbox) *(Hoặc tham khảo bản archived: [`modelcontextprotocol/servers-archived/tree/main/src/postgres`](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/postgres))*
 * **Gói NPM**: `@modelcontextprotocol/server-postgres` *(NPM registry)* hoặc công cụ enterprise [`mcp-toolbox`](https://github.com/googleapis/mcp-toolbox)
-* **Mục đích**: Cho phép Agent truy vấn trực tiếp vào CSDL PostgreSQL (môi trường dev cục bộ) để soi cấu trúc bảng, các trường quan hệ Many2one/One2many và index của Odoo.
+* **Mục đích**: Cho phép Agent truy vấn trực tiếp vào CSDL PostgreSQL (môi trường dev cục bộ) để đối soát cấu trúc bảng, các trường quan hệ Many2one/One2many và index của Odoo.
 * **Cấu hình JSON mẫu (`@modelcontextprotocol/server-postgres`)**:
 ```json
 {
@@ -77,4 +77,4 @@ Tài liệu này tổng hợp thông tin, đường dẫn repository chính th�
   }
 }
 ```
-*(Lưu ý: Nếu sử dụng trong Google Antigravity, `parallel-search` đã được tích hợp sẵn làm công cụ mặc định, anh em có thể dùng ngay mà không cần cấu hình)*.
+*(Lưu ý: Nếu sử dụng trong Google Antigravity, `parallel-search` đã được tích hợp sẵn làm công cụ mặc định, có thể kích hoạt trực tiếp mà không cần cấu hình)*.
