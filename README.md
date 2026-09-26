@@ -27,29 +27,29 @@ Trong kỹ nghệ phần mềm hiện đại (được chuẩn hóa qua các cô
 
 $$\mathbf{Agent = Model + Harness}$$
 
-* **Model (Mô hình suy luận)**: Cung cấp năng lực hiểu ngữ nghĩa và suy luận logic thô, tuy nhiên mang bản chất phi trạng thái (stateless), dễ xảy ra hiện tượng suy diễn sai lệch (hallucination) khi thiếu dữ liệu thực tế.
-* **Harness (Môi trường điều phối và kiểm soát)**: Là **toàn bộ hạ tầng kỹ thuật mang tính tất định (Deterministic Infrastructure)** được thiết lập bao quanh mô hình, bao gồm: các ràng buộc kiến trúc, công cụ truy xuất dữ liệu vật lý, môi trường thực thi cô lập và các quy trình thẩm định chất lượng.
+* **Model (Mô hình suy luận)**: Cung cấp năng lực hiểu ngữ nghĩa và suy luận logic thô, tuy nhiên mang bản chất phi trạng thái (stateless) và dễ gặp hiện tượng hallucination khi thiếu dữ liệu thực tế từ hệ thống.
+* **Harness (Môi trường điều phối và kiểm soát)**: Là **toàn bộ hạ tầng kỹ thuật có kiểm soát (deterministic infrastructure)** được thiết lập bao quanh mô hình, bao gồm: các ràng buộc kiến trúc, công cụ kết nối dữ liệu thực tế, môi trường thực thi cô lập và các chốt kiểm định chất lượng.
 
 ```
    ┌────────────────────────────────────────────────────────────────────────┐
    │                       THE AGENT HARNESS SYSTEM                         │
    │                                                                        │
-   │   [GUIDES - Định hướng kiến trúc]                                      │
-   │   • Skills (.agents/skills)     ──► Ràng buộc ORM, loại trừ SQL thô    │
+   │   [GUIDES - Ràng buộc & Chỉ dẫn]                                       │
+   │   • Skills (.agents/skills)     ──► Ràng buộc ORM, hạn chế SQL thô     │
    │   • Reverse Interview Gate      ──► Phân tích đặc tả chuẩn Nhật        │
    │                                                                        │
-   │   [ACTUATORS - Tương tác vật lý]┌──────────────────────────────────┐   │
-   │   • PostgreSQL MCP              │          THE BRAIN               │   │
-   │   • Chrome DevTools MCP         │            (LLM)                 │   │
-   │   • Sequential Thinking         │      Năng lực suy luận thô       │   │
-   │                                 └──────────────────────────────────┘   │
-   │   [VERIFIERS - Thẩm định độc lập]                                      │
-   │   • Role-play Debate            ──► Đánh giá phản biện kiến trúc       │
+   │   [ACTUATORS - Kết nối & Tương tác]┌────────────────────────────────┐   │
+   │   • PostgreSQL MCP                 │          THE BRAIN             │   │
+   │   • Chrome DevTools MCP            │            (LLM)               │   │
+   │   • Sequential Thinking            │      Năng lực suy luận thô     │   │
+   │                                    └────────────────────────────────┘   │
+   │   [VERIFIERS - Kiểm tra & Đánh giá]                                    │
+   │   • Role-play Debate            ──► Phản biện phương án kiến trúc      │
    │   • Independent Reviewer        ──► Kiểm soát ACL, N+1 query, i18n     │
    └────────────────────────────────────────────────────────────────────────┘
 ```
 
-> **Sự chuyển dịch vai trò chuyên môn**: Kỹ sư phần mềm chuyển đổi từ việc triển khai mã nguồn chi tiết sang vai trò **Kỹ sư thiết kế môi trường tác tử (Harness Engineer)** — người chịu trách nhiệm thiết lập các giới hạn kiến trúc, tích hợp công cụ và quản trị các vòng lặp phản hồi đảm bảo chất lượng hệ thống.
+> **Sự chuyển dịch vai trò**: Lập trình viên không còn chỉ tập trung vào việc gõ từng dòng mã chi tiết, mà đóng vai trò như một **Harness Engineer** — người thiết kế luật chơi, trang bị công cụ kiểm soát và thiết lập các vòng lặp phản hồi đảm bảo chất lượng cho tác tử AI.
 
 ---
 
