@@ -163,7 +163,7 @@ odoo-coding-agent-playbook/
 ```
 
 ### Quy trình áp dụng vào dự án Odoo:
-1. Sao chép thư mục `.agents/skills/` (hoặc `.agent/skills/`) vào thư mục gốc của repository dự án Odoo.
+1. Sao chép thư mục `.agents/skills/` vào thư mục gốc của repository dự án Odoo.
 2. Cấu hình các công cụ MCP phù hợp với môi trường làm việc theo `mcp-configs/README.md`.
 3. Khi tiếp nhận yêu cầu, sử dụng các prompt tại `prompts/README.md` để khởi động chu trình: **Làm rõ (Clarify) ➔ Lập kiến trúc (Trace) ➔ Thực thi có kiểm định (Dual Review)**.
 
