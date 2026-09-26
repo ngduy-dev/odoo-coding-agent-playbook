@@ -5,7 +5,7 @@
 [![Methodology](https://img.shields.io/badge/Methodology-Harness%20Engineering-darkgreen.svg)]()
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-success.svg)]()
 
-> **Tài liệu phương pháp luận (Playbook) & Bộ công cụ mẫu (Starter Kit) dành cho Kỹ sư Phát triển Odoo**  
+> **Cẩm nang kỹ thuật thực hành (Handbook) & Bộ công cụ mẫu (Starter Kit) dành cho Kỹ sư Phát triển Odoo**  
 > Định hình mô hình làm việc có cấu trúc: từ phát triển thủ công sang **thiết lập môi trường điều phối và kiểm soát tác tử tự hành (Harness Engineering)**, hiện thực hóa nguyên lý **Solution First** và đáp ứng các tiêu chuẩn kỹ thuật khắt khe của thị trường Nhật Bản.
 
 ---
