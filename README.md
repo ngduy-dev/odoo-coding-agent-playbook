@@ -79,6 +79,11 @@ Trước khi lập trình, kỹ sư kích hoạt tác tử đóng vai Kiến tr�
 Toàn bộ tri thức và quy chuẩn dự án được đóng gói thành các module Skill trong thư mục `.agent/skills/`. Nhờ cơ chế **Progressive Disclosure**, tác tử chỉ nạp chỉ dẫn chi tiết khi phát hiện ngữ cảnh phù hợp, tránh hiện tượng suy giảm độ chú ý (Attention Decay):
 * **`odoo-workflow` (Nguyên tắc: *No citation, no code*)**: Mọi thao tác ghi đè phương thức (Override) hay kế thừa giao diện (XPath) bắt buộc phải trích dẫn chính xác `file:line` trong mã nguồn Odoo Base làm bằng chứng trước khi sinh mã.
 * **`odoo-16.0` đến `odoo-19.0` Reference Packs**: Cung cấp tài liệu tra cứu API ORM, View, Controller và OWL framework tương thích chính xác theo từng phiên bản Odoo.
+* **`ponytail` (Triết lý: *Ladder of Laziness — Nấc thang tối giản*)**: Bộ kỹ năng chống phình mã (Anti-bloat & YAGNI) từ **DietrichGebert**. Bắt buộc tác tử phải tư duy như một "Senior lười biếng nhưng hiệu quả":
+  1. *Có thật sự cần viết không?* (Nếu Odoo Standard hoặc thư viện chuẩn đã có thì tuyệt đối không viết thêm).
+  2. *Đã có hàm tiện ích tương tự trong codebase chưa?*
+  3. *Có thể giải quyết bằng 1 dòng mã hoặc cấu hình không?*
+  4. *Chỉ khi không còn lựa chọn nào khác mới viết mã tối thiểu.*
 
 ---
 
@@ -169,5 +174,6 @@ Dự án này được phát hành dưới giấy phép mã nguồn mở **[MIT 
 ### Ghi nhận đóng góp (Acknowledgments):
 - Phương pháp luận **Harness Engineering** dựa trên các nghiên cứu kỹ thuật của **Martin Fowler** (Thoughtworks).
 - Bộ kỹ năng Odoo và công cụ kiểm thử `odoo-workflow` xuất sắc từ tác giả **[unclecatvn/agent-skills](https://github.com/unclecatvn/agent-skills)**.
+- Triết lý tối giản hóa mã nguồn và bộ kỹ năng `ponytail` từ tác giả **[DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)**.
 - Chuẩn giao thức **Model Context Protocol (MCP)** do **Anthropic** khởi xướng.
 - Tinh thần kiến tạo giải pháp bền vững (*Solution First*) của tập thể kỹ sư tại **TGL Solutions**.
