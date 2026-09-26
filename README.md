@@ -43,7 +43,7 @@ $$\mathbf{Agent = Model + Harness}$$
    │   • Chrome DevTools MCP         │            (LLM)                 │   │
    │   • Sequential Thinking         │     Khả năng suy luận thô        │   │
    │                                 └──────────────────────────────────┘   │
-   │   [SENSORS - Kiểm định]                                                │
+   │   [VERIFIERS - Kiểm tra & Phản hồi]                                    │
    │   • Role-play Debate            ──► Đấu trí phản biện kiến trúc        │
    │   • Independent Reviewer        ──► Rà soát ACL, N+1 query, i18n       │
    └────────────────────────────────────────────────────────────────────────┘
@@ -116,29 +116,31 @@ Mỗi dự án có hạ tầng công cụ riêng, dưới đây là **4 MCP hữ
 
 ---
 
-## 👥 Thành Phần 3: Cảm Biến & Vòng Lặp Kiểm Thử (Sensors & Feedback — Subagents)
+## 👥 Thành Phần 3: Cơ Chế Kiểm Tra & Vòng Lặp Phản Hồi — Góc Nhìn Về Subagents
 
-Trong mô hình Harness, **Sensors (Cơ chế Feedback)** đóng vai trò giám sát, đo lường và thẩm định kết quả đầu ra của tác tử, kích hoạt vòng lặp tự sửa lỗi (Self-healing Loop) trước khi chuyển giao mã nguồn cho lập trình viên.
+Trong phương pháp luận Harness, việc kiểm tra kết quả đầu ra (Verification) và kích hoạt vòng lặp tự sửa lỗi (Feedback Loop) đóng vai trò rất quan trọng để đảm bảo an toàn trước khi chuyển giao mã nguồn cho lập trình viên.
 
 ### 1. Nguyên lý Phân lập Ngữ cảnh (Context Isolation)
-Thay vì nhồi nhét toàn bộ lịch sử trao đổi vào một cửa sổ ngữ cảnh duy nhất gây loãng thông tin, hệ thống điều phối các **Subagents** hoạt động độc lập với vai trò và bộ nhớ riêng biệt.
+Thay vì nhồi nhét toàn bộ lịch sử trao đổi vào một cửa sổ ngữ cảnh duy nhất gây loãng thông tin (Attention Decay), kỹ sư có thể tận dụng các **Subagents** hoạt động độc lập với vai trò và không gian bộ nhớ riêng biệt.
 
-### 2. Hai mô hình phối hợp chuẩn mực:
+### 2. Hai cách phối hợp thực tế tác giả thường áp dụng:
 
-#### 🔹 Mô hình 1: Phản biện Kiến trúc Đối lập (Role-play Debate)
+Dưới đây là 2 mô hình phân vai mà tác giả đúc kết và thấy mang lại hiệu quả rõ rệt nhất trong công việc thực tế hàng ngày:
+
+#### 🔹 Cách 1: Phản biện Kiến trúc Đối lập (Role-play Debate)
 * **Tác tử Đề xuất (Solution Proponent)**: Đưa ra giải pháp kỹ thuật đáp ứng yêu cầu nghiệp vụ.
-* **Tác tử Thẩm định (System & Performance Critic)**: Phân tích rủi ro hệ thống (khóa bảng DB, lỗi timeout khi dữ liệu lớn, rủi ro migration).
-* **Vòng lặp**: Hai tác tử tự tranh biện để loại bỏ điểm mù kiến trúc, giúp kỹ sư lựa chọn phương án tối ưu nhất.
+* **Tác tử Thẩm định (System & Performance Critic)**: Phân tích các rủi ro tiềm ẩn (khóa bảng CSDL, nguy cơ timeout khi dữ liệu lớn, rủi ro khi nâng cấp phiên bản Odoo sau này).
+* **Hiệu quả thực tế**: Hai tác tử tự tranh biện giúp kỹ sư nhìn ra các góc khuất kiến trúc và cân nhắc trade-off kỹ lưỡng trước khi bắt tay vào viết mã.
 
-#### 🔹 Mô hình 2: Chốt Kiểm Định Độc Lập (Independent Reviewer Gate)
-* **Tác tử Triển khai (Coder)**: Thực hiện chuyển đổi đặc tả thành mã nguồn.
-* **Tác tử Đánh giá (Reviewer)**: Được cô lập hoàn toàn với quá trình viết mã, chỉ tiếp nhận Git Diff và bộ tiêu chí kiểm định:
+#### 🔹 Cách 2: Chốt Kiểm Định Độc Lập (Independent Reviewer Gate)
+* **Tác tử Triển khai (Coder)**: Tập trung chuyển đổi đặc tả đã thống nhất thành mã nguồn Odoo.
+* **Tác tử Đánh giá (Reviewer)**: Được cô lập hoàn toàn với quá trình viết mã, chỉ tiếp nhận bản Git Diff và danh mục kiểm tra kỹ thuật (Checklist):
   - *Bảo mật*: Kiểm tra khai báo quyền trong `ir.model.access.csv`, rà soát `sudo()` tránh rò rỉ dữ liệu đa công ty.
   - *Hiệu năng*: Bắt lỗi truy vấn N+1 (N+1 Query Problem) trong các vòng lặp xử lý dữ liệu.
   - *Bản địa hóa*: Đảm bảo 100% chuỗi ký tự hiển thị được bọc qua hàm `_()` cho ngôn ngữ Nhật Bản.
-* **Feedback Loop**: Coder buộc phải tự sửa mã đến khi Reviewer xác nhận đạt toàn bộ tiêu chuẩn.
+* **Vòng phản hồi**: Tác tử triển khai tự điều chỉnh lại mã nguồn dựa trên các góp ý của Tác tử đánh giá cho đến khi đạt yêu cầu.
 
-👉 Chi tiết các mẫu System Prompt tại: [`prompts/README.md`](prompts/README.md).
+👉 Chi tiết các mẫu System Prompt tham khảo tại: [`prompts/README.md`](prompts/README.md).
 
 ---
 
